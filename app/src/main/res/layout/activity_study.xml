@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/seacher_top" />
+
+    <com.bwf.p1_landz.view.test.RefreshListView_Bwf
+        android:id="@+id/seacher_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdgeLength="0dp"
+        android:fastScrollEnabled="true"
+        android:listSelector="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_no_house"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="暂无数据" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_no_data"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/map_fail" />
+    </RelativeLayout>
+
+</RelativeLayout>
